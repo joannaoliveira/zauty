@@ -1,0 +1,479 @@
+@font-face {
+    font-family: 'Branding SF';
+    src: url('fonts/BrandingSF-Bold.eot');
+    src: url('fonts/BrandingSF-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BrandingSF-Bold.woff2') format('woff2'),
+        url('fonts/BrandingSF-Bold.woff') format('woff'),
+        url('fonts/BrandingSF-Bold.ttf') format('truetype'),
+        url('fonts/BrandingSF-Bold.svg#BrandingSF-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Branding SF SemiLight';
+    src: url('fonts/BrandingSF-SemiLight.eot');
+    src: url('fonts/BrandingSF-SemiLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BrandingSF-SemiLight.woff2') format('woff2'),
+        url('fonts/BrandingSF-SemiLight.woff') format('woff'),
+        url('fonts/BrandingSF-SemiLight.ttf') format('truetype'),
+        url('fonts/BrandingSF-SemiLight.svg#BrandingSF-SemiLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --white: #FFF;
+    --black: #000;
+    --gray: #373435;
+    --bg-gray: #F6F6FA;
+    --light-gray: #E6E7E8;
+    --main-color: #FF013F;
+    --font-bold: 'Branding SF';
+    --font-light: 'Branding SF SemiLight';
+}
+  
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: 0;
+	font-weight: normal;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+ol, ul {list-style: none;}
+table {border-collapse: separate; border-spacing: 0;}
+caption, th, td {text-align: left; font-weight: normal;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+img, picture, video, embed {max-width: 100%;}
+*, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+body {
+	color: var(--black);
+    font-family: var(--font-light);
+	background-color: var(--white);
+}
+
+a {color: var(--black); text-decoration: none;}
+	
+strong {font-weight: bold;}
+em {font-style: italic;}
+small {font-size: 0.7em;}
+sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+.img-button {cursor: pointer; background:none repeat scroll 0 0 transparent; border:medium none; padding:0; vertical-align:middle;}
+
+.btn-tipo1, .btn-tipo2 {
+    font-size: 1.1rem;
+    display: inline-block;
+    margin: 0.5rem 1rem 0.5rem 0;
+    padding: 0.4rem 1.6rem;
+    border-radius: 20px;
+    font-family: var(--font-bold);
+}
+.btn-tipo1 {
+    color: var(--white);
+    margin-right: 2rem;
+    background-color: var(--main-color);
+    border: solid 1px var(--white);
+}
+    .btn-tipo1:hover {
+        color: var(--main-color);
+        background-color: var(--white);
+        border: solid 1px var(--main-color);
+    }
+.btn-tipo2 {
+    color: var(--main-color);
+    margin-right: 0;
+    background-color: var(--white);    
+    border: solid 1px var(--main-color);
+}
+    .btn-tipo2:hover {
+        color: var(--white);
+        background-color: var(--main-color);
+    }
+
+#header {
+    min-height: 770px;
+    background: url(../images/img-transforme.jpg) no-repeat right bottom transparent;
+}
+#nav-site {text-align: right;}
+    #nav-site a {
+        font-size: 1.2rem;
+        font-weight: 300;
+        transition: all 0.5s;
+        display: inline-block;
+    }
+        #nav-site a:hover {color: var(--main-color);}
+        #nav-site a:first-child {margin-left: 0;}
+        #nav-site a:last-child {
+            color: var(--white);
+            padding: 0.5rem 1.8rem;
+            font-family: var(--font-bold);
+            border-radius: 20px;
+            border: solid 1px var(--main-color);
+            background-color: var(--main-color);
+        }
+            #nav-site a:last-child:hover {
+                color: var(--main-color);
+                background-color: var(--white);
+            }
+        
+#header h1 {
+    font-size: 5rem;
+    line-height: 1em;
+    margin: 4rem 0 1.6rem;
+    font-family: var(--font-bold);
+}
+#header h2, #header p {max-width: 555px;}
+#header h2 {line-height: 1.4em; margin-bottom: 1rem;}
+#header p {margin-bottom: 2rem;}
+#header h3 {
+    max-width: 450px;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    font-family: var(--font-bold);
+}
+#header .btn a {margin-right: 2rem; display: inline-block;}
+
+@media screen and (max-width: 1400px) {
+    #header h1 {font-size: 4.6rem;}
+    #header h2 {font-size: 1.8rem;}
+}
+@media screen and (max-width: 1200px) {
+    #header h1 {font-size: 4rem;}
+    #header h2 {font-size: 1.4rem;}
+    #header h2, #header p, #header h3 {max-width: 430px;}
+    #header h3 {font-size: 1.6rem;}
+}
+@media screen and (max-width: 991px) {
+    #header h2, #header p, #header h3 {max-width: 100%;}
+    #header {background: none;}
+    #nav-site {text-align: left; margin-top: 2rem;}
+}
+@media screen and (max-width: 767px) {
+    #header {padding-bottom: 3rem;}
+}
+@media screen and (max-width: 480px) {
+    #header h1 {font-size: 3rem;}
+}
+
+#solucao {
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+    padding-top: 5rem;
+    background-color: var(--black);
+}
+    #solucao h2 {
+        font-size: 2.8rem;
+        max-width: 1000px;
+        margin: 0 auto 2rem;
+        font-family: var(--font-bold);
+    }
+    #solucao h3 {
+        color: var(--main-color);
+        font-size: 1.6rem;
+        max-width: 500px;
+        margin: 0 auto 2rem;
+    }
+    #solucao p {
+        font-size: 1.1rem;
+        line-height: 1.8em;
+        max-width: 850px;
+        margin: 0 auto 4rem;
+    }
+    #solucao .img {margin-bottom: -320px;}
+
+#organize-departamentos {
+    padding-top: 400px;
+    text-align: center;
+}
+    #organize-departamentos h2 {
+        color: var(--gray);
+        font-size: 2.8rem;
+        max-width: 700px;
+        margin: 0 auto 4rem;
+        font-family: var(--font-bold);
+    }
+    #organize-departamentos p {
+        font-size: 1.2rem;
+        max-width: 885px;
+        margin: 0 auto 1.8rem;
+    }
+        #organize-departamentos p.destaque {
+            max-width: 650px;
+            color: var(--gray);
+            font-size: 1.6rem;
+            margin: 3rem auto 4rem;
+        }
+        
+@media screen and (max-width: 991px) {
+    #solucao .img {margin-bottom: -180px;}
+    #organize-departamentos {padding-top: 260px;}
+}
+@media screen and (max-width: 767px) {
+    #solucao .img {margin-bottom: -120px;}
+    #organize-departamentos {padding-top: 220px;}
+}
+@media screen and (max-width: 500px) {
+    #solucao h2, #organize-departamentos h2 {font-size: 2.3rem; margin-bottom: 3rem;}
+}
+
+#descubra-funcoes {
+    width: 100%;
+    padding: 5rem 0;
+    background-color: var(--bg-gray);
+}
+    #descubra-funcoes h2 {
+        max-width: 650px;
+        font-size: 2.8rem;
+        text-align: center;
+        margin: 0 auto 5rem;
+        font-family: var(--font-bold);
+    }
+    #descubra-funcoes ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #descubra-funcoes li {
+        width: 30%;
+        margin: 1rem 5% 1rem 0;
+        padding: 0 0 0 30px;
+        background: url(../images/icone-check.png) no-repeat 0 0 transparent;
+    }    
+        #descubra-funcoes li:nth-child(3n) {margin-right: 0;}
+        
+@media screen and (max-width: 767px) {
+    #descubra-funcoes li {width: 45%;}
+    #descubra-funcoes li:nth-child(3n) {margin-right: 5%;}
+    #descubra-funcoes li:nth-child(even) {margin-right: 0;}
+}
+@media screen and (max-width: 500px) {#descubra-funcoes h2 {font-size: 2.3rem; margin-bottom: 3.5rem;}}
+@media screen and (max-width: 470px) {
+    #descubra-funcoes li {width: 100%; margin-right: 0;}
+    #descubra-funcoes li:nth-child(3n) {margin-right: 0;}
+}
+
+.faixa-destaque {
+    width: 100%;
+    padding: 4rem 0;
+    background-color: var(--main-color);
+}
+    .faixa-destaque .destaque {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .faixa-destaque p {
+        color: var(--white);
+        font-size: 1.6rem;
+        font-family: var(--font-bold);
+    }
+        #transforme-conversas p {font-size: 2.2rem;}
+    .faixa-destaque .btn-tipo1 {margin-right: 0.5rem;}
+    .faixa-destaque .btn-tipo2:hover {border-color: var(--white);}
+    
+@media screen and (max-width: 1400px) {
+    .faixa-destaque p {font-size: 1.3rem;}
+} 
+@media screen and (max-width: 1200px) {
+    .faixa-destaque p {font-size: 1rem;}
+}
+@media screen and (max-width: 991px) {
+    .faixa-destaque p {font-size: 1.6rem;}
+    .faixa-destaque .acoes {width: 310px;}
+}
+@media screen and (max-width: 767px) {
+    .faixa-destaque p {font-size: 1.3rem;}
+    .faixa-destaque .acoes {width: 380px;}
+}
+@media screen and (max-width: 575px) {
+    .faixa-destaque .destaque {flex-wrap: wrap;}
+    .faixa-destaque p {width: 100%;}
+    .faixa-destaque .acoes {width: 100%; margin-top: 2rem;}
+}
+
+#fluxos-de-atendimento {
+    min-height: 790px;
+    background: url(../images/img-fluxo-atendimento.jpg) no-repeat 0 bottom transparent;
+}
+    #fluxos-de-atendimento h2 {
+        color: var(--gray);
+        font-size: 3.2rem;
+        margin: 0 0 2rem;
+        font-family: var(--font-bold);
+    }
+    #fluxos-de-atendimento p {
+        color: var(--gray);
+        font-size: 1.3rem;
+        line-height: 1.6em;
+        margin: 0 0 1.4rem;
+    }
+    #fluxos-de-atendimento ul {
+        margin-top: 4rem;
+        counter-reset: list-counter;
+    }
+        #fluxos-de-atendimento li {
+            font-size: 1.6rem;
+            position: relative;
+            padding: 0.6rem 0 4rem 80px;
+        }
+            #fluxos-de-atendimento li:last-child {padding-bottom: 0;}
+            #fluxos-de-atendimento li::before {
+                content: counter(list-counter);
+                counter-increment: list-counter;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: var(--white);
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                display: inline-block;
+                border-radius: 100px;
+                margin-right: 20px;
+                font-family: var(--font-bold);
+                background-color: var(--main-color);
+            }
+            #fluxos-de-atendimento li::after {
+                content: "";
+                position: absolute;
+                left: 30px;
+                top: 70px;
+                height: calc(100% - 80px);
+                width: 4px;
+                background: var(--light-gray);
+            }
+                #fluxos-de-atendimento li:last-child:after {display: none;}
+                
+@media screen and (max-width: 1199px) {
+    #fluxos-de-atendimento {background: none;}
+}
+@media screen and (max-width: 530px) {
+    #fluxos-de-atendimento h2 {font-size: 2.8rem;}
+    #fluxos-de-atendimento p {font-size: 1.1rem;}
+    #fluxos-de-atendimento li {font-size: 1.4rem; padding: 0.2rem 0 3rem 60px;}
+    #fluxos-de-atendimento li::before {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    #fluxos-de-atendimento li::after {top: 50px; left: 20px; height: calc(100% - 60px);}
+}
+
+#simplifique-atendimento {
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 0;
+    background-color: var(--black);
+}
+    #simplifique-atendimento h2 {
+        max-width: 880px;
+        margin: 0 auto 2rem;
+        font-family: var(--font-bold);
+    }
+    #simplifique-atendimento p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto 5rem;
+    }
+    
+    #simplifique-atendimento .segmentos .img {
+        height: 130px;
+        line-height: 130px;
+        margin-bottom: 1rem;
+    }
+        #simplifique-atendimento .segmentos .img img {vertical-align: middle;}
+    #simplifique-atendimento .segmentos h3 {
+        padding: 0 2rem;
+        margin-bottom: 1rem;
+        font-family: var(--font-bold);
+    }
+    #simplifique-atendimento .segmentos p {
+        font-size: 1.1rem; 
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+    }
+
+.titulo {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--font-bold);
+}
+
+#depoimentos {
+    padding: 5rem 0;
+    background-color: var(--bg-gray);
+}
+    #depoimentos .box-depoimento {padding: 2rem;}
+    #depoimentos .depoimento {
+        padding: 3rem 2rem 2rem;
+        border-radius: 20px;
+        background: url(../images/icone-depoimento.png) no-repeat 2rem 2rem var(--white);
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+    }
+        #depoimentos .depoimento p {
+            color: var(--gray);
+            font-size: 1.2rem;
+            line-height: 1.6em;
+            margin-bottom: 2rem;
+        }
+        #depoimentos .depoimento .autor {display: flex; align-items: center;}
+            #depoimentos .depoimento .autor img {margin-right: 10px;}
+            #depoimentos .depoimento .autor .nome {
+                font-size: 1.1rem;
+                font-family: var(--font-bold);
+            }
+
+#footer-site {    
+    width: 100%;
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--black);
+}
+    #footer-site, #footer-site a {color: var(--white);}
+    #footer-site .teste {
+        font-size: 3rem;
+        margin: 0 0 2rem;
+        font-family: var(--font-bold);
+    }
+    #footer-site .duvida {
+        font-size: 2rem;
+        margin: 0 0 3rem;
+    }
+    #footer-site .WhatsApp {
+        font-size: 3rem;
+        line-height: 1.1em;
+        margin-bottom: 5rem;
+        font-family: var(--font-bold);
+    }
+        #footer-site .WhatsApp img {
+            margin-right: 1rem;
+            vertical-align: middle;
+        }
+        
+@media screen and (max-width: 991px) {
+    #footer-site .teste, #footer-site .WhatsApp {font-size: 2rem;}
+    #footer-site .duvida {font-size: 1.6rem;}
+}
