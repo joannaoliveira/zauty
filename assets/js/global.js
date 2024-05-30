@@ -1,7 +1,22 @@
 $( document ).ready(function() {
 
-    $(".solicitar-analise").on( "click", function() {
-        $("#frmCotacao").get(0).scrollIntoView({behavior: 'smooth'});
+    $(".quem-somos").on( "click", function() {
+        $("#solucao").get(0).scrollIntoView({behavior: 'smooth'});
+        return false;
+    });
+
+    $(".funcionalidades").on( "click", function() {
+        $("#descubra-funcoes").get(0).scrollIntoView({behavior: 'smooth'});
+        return false;
+    });
+
+    $(".comecar-agora").on( "click", function() {
+        $("#nossos-planos").get(0).scrollIntoView({behavior: 'smooth'});
+        return false;
+    });
+
+    $(".veja-planos").on( "click", function() {
+        $("#nossos-planos").get(0).scrollIntoView({behavior: 'smooth'});
         return false;
     });
 
@@ -50,6 +65,33 @@ $( document ).ready(function() {
                 breakpoint: 992,
                 settings: {
                     arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+            }
+            }
+        ]
+    });
+
+    $('.nossos-planos').slick({
+        dots: false,
+        arrows: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1
             }
