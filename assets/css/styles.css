@@ -69,7 +69,7 @@ body {
 
 a {color: var(--black); text-decoration: none;}
 	
-strong {font-weight: bold;}
+strong {font-weight: bold; font-family: var(--font-bold);}
 em {font-style: italic;}
 small {font-size: 0.7em;}
 sub, sup {font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;}
@@ -178,16 +178,25 @@ sub {bottom: -0.25em;}
     #header h3 {font-size: 1.6rem;}
 }
 @media screen and (max-width: 991px) {
+    #header {
+        padding-bottom: 662px;
+        background-size: contain;
+        background-position: center bottom;
+    }
+    #header h1 {font-size: 3rem;}
     #header h2, #header p, #header h3 {max-width: 100%;}
-    #header {background: none;}
     #nav-site {text-align: left; margin-top: 2rem;}
 }
 @media screen and (max-width: 767px) {
-    #header {padding-bottom: 3rem;}
+    #header {padding-bottom: 520px;}
     #nav-site {display: none;}
+    #header h1 {margin-top: 2rem;}
 }
 @media screen and (max-width: 480px) {
-    #header h1 {font-size: 3rem;}
+    #header {padding-bottom: 450px;}
+}
+@media screen and (max-width: 420px) {
+    #header {padding-bottom: 350px;}
 }
 
 #solucao {
@@ -246,7 +255,7 @@ sub {bottom: -0.25em;}
 }
 @media screen and (max-width: 767px) {
     #solucao .img {margin-bottom: -120px;}
-    #organize-departamentos {padding-top: 220px;}
+    #organize-departamentos {padding-top: 200px;}
 }
 @media screen and (max-width: 500px) {
     #solucao h2, #organize-departamentos h2 {font-size: 2.3rem; margin-bottom: 3rem;}
@@ -277,6 +286,7 @@ sub {bottom: -0.25em;}
         #descubra-funcoes li:nth-child(3n) {margin-right: 0;}
         
 @media screen and (max-width: 767px) {
+    #descubra-funcoes {padding: 4rem 0;}
     #descubra-funcoes li {width: 45%;}
     #descubra-funcoes li:nth-child(3n) {margin-right: 5%;}
     #descubra-funcoes li:nth-child(even) {margin-right: 0;}
@@ -318,6 +328,7 @@ sub {bottom: -0.25em;}
     .faixa-destaque .acoes {width: 310px;}
 }
 @media screen and (max-width: 767px) {
+    .faixa-destaque {padding: 3rem 0;}
     .faixa-destaque p {font-size: 1.3rem;}
     .faixa-destaque .acoes {width: 380px;}
 }
@@ -382,7 +393,13 @@ sub {bottom: -0.25em;}
                 #fluxos-de-atendimento li:last-child:after {display: none;}
                 
 @media screen and (max-width: 1199px) {
-    #fluxos-de-atendimento {background: none;}
+    #fluxos-de-atendimento {
+        padding-bottom: 745px !important;        
+        background-position: center bottom;
+    }
+}
+@media screen and (max-width: 767px) {
+    #fluxos-de-atendimento {background-size: contain; padding-bottom: 580px !important;}
 }
 @media screen and (max-width: 530px) {
     #fluxos-de-atendimento h2 {font-size: 2.8rem;}
@@ -394,6 +411,15 @@ sub {bottom: -0.25em;}
         line-height: 40px;
     }
     #fluxos-de-atendimento li::after {top: 50px; left: 20px; height: calc(100% - 60px);}
+}
+@media screen and (max-width: 500px) {
+    #fluxos-de-atendimento {padding-bottom: 540px !important;}
+}
+@media screen and (max-width: 460px) {
+    #fluxos-de-atendimento {padding-bottom: 440px !important;}
+}
+@media screen and (max-width: 380px) {
+    #fluxos-de-atendimento {padding-bottom: 380px !important;}
 }
 
 #simplifique-atendimento {
@@ -429,6 +455,8 @@ sub {bottom: -0.25em;}
         padding: 0 2rem;
         margin-bottom: 2rem;
     }
+    
+@media screen and (max-width: 767px) {#simplifique-atendimento {padding: 4rem 0;}}
 
 .titulo {
     font-size: 2.8rem;
@@ -436,6 +464,7 @@ sub {bottom: -0.25em;}
     margin-bottom: 4rem;
     font-family: var(--font-bold);
 }
+@media screen and (max-width: 767px) {.titulo {margin-bottom: 2rem;}}
 
 #nossos-planos {padding: 5rem 0;}
 .plano {
@@ -504,6 +533,17 @@ sub {bottom: -0.25em;}
             }
 
     #nossos-planos .info {font-size: 1.2rem; text-align: center; padding-top: 2rem;}
+    
+@media screen and (max-width: 992px) {
+    #nossos-planos {padding: 4rem 2rem;}
+    .plano {margin-left: 1.2rem;}
+}
+@media screen and (max-width: 450px) {
+    .plano .valor {font-size: 2.5rem;}
+        .plano .valor span {font-size: 1.2rem;}        
+    .plano ul {min-height: 350px;}
+    .plano li {font-size: 1.1rem;}
+}
 
 #depoimentos {
     padding: 5rem 0;
@@ -561,4 +601,8 @@ sub {bottom: -0.25em;}
 @media screen and (max-width: 991px) {
     #footer-site .teste, #footer-site .WhatsApp {font-size: 2rem;}
     #footer-site .duvida {font-size: 1.6rem;}
+}
+@media screen and (max-width: 767px) {
+    #footer-site, #depoimentos {padding: 4rem 0;}
+    #footer-site .WhatsApp {margin-bottom: 4rem;}
 }

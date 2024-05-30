@@ -91,6 +91,7 @@ $( document ).ready(function() {
             {
                 breakpoint: 992,
                 settings: {
+                    initialSlide: 1,
                     dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1
