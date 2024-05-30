@@ -108,8 +108,19 @@ sub {bottom: -0.25em;}
         background-color: var(--main-color);
     }
 
+@keyframes animatedBackground {
+    from {
+        background-position: right 682px;
+    }
+    to {
+        background-position: right bottom;
+    }
+}
+
 #header {
     min-height: 770px;
+    animation: animatedBackground;
+    animation-duration: 0.5s;
     background: url(../images/img-transforme.jpg) no-repeat right bottom transparent;
 }
 #nav-site {text-align: right;}
@@ -135,6 +146,10 @@ sub {bottom: -0.25em;}
                 background-color: var(--white);
             }
         
+#header .animacao {
+    animation: backInLeft;
+    animation-duration: 1s;
+}
 #header h1 {
     font-size: 5rem;
     line-height: 1em;
