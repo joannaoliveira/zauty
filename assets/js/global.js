@@ -83,6 +83,7 @@ $( document ).ready(function() {
             {
                 breakpoint: 1400,
                 settings: {
+                    arrows: true,
                     dots: true,
                     slidesToShow: 2,
                     slidesToScroll: 1
@@ -92,6 +93,7 @@ $( document ).ready(function() {
                 breakpoint: 992,
                 settings: {
                     initialSlide: 1,
+                    arrows: true,
                     dots: true,
                     slidesToShow: 1,
                     slidesToScroll: 1

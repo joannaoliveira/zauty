@@ -211,13 +211,23 @@
     background-color: #7f7f7f;
 }
 
+#nossos-planos .slick-prev, #nossos-planos .slick-next {top: 45%;}
+#nossos-planos .slick-prev {left: -50px;}
+#nossos-planos .slick-next {right: -50px;}
 @media screen and (max-width: 620px) {
-    .slick-prev
-    {
-        left: 0px;
+    .slick-prev {left: 0px;}
+    .slick-next {right: 0px;}
+}
+@media screen and (max-width: 680px) {
+    #nossos-planos .slick-prev:before, #nossos-planos .slick-next:before {    
+        width: 18px;
+        height: 38px;
+        background-size: contain;
     }
-    .slick-next
-    {
-        right: 0px;
-    }
+    #nossos-planos .slick-prev {left: -30px;}
+    #nossos-planos .slick-next {right: -30px;}
+}
+@media screen and (max-width: 575px) {
+    #nossos-planos .slick-prev {left: -20px;}
+    #nossos-planos .slick-next {right: -25px;}
 }
